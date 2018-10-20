@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+header {
+  position: fixed;
+  box-sizing: border-box;
+  min-height: 80px;
+  padding: 10px;
+  width: 100%;
+  z-index: 2;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#header-img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  padding: 0 10px;
+  color: black;
+  text-decoration: none;
+}
+
+#main, footer {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 5%;
+  position: relative;
+  top: 90px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form {
+  margin: 25px 0;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 30px 30px;
+  grid-row-gap: 15px;
+  justify-items: center;
+}
+
+#submit {
+  background-color: #f1c40f;
+  border: none;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+#features {
+  margin: 25px 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 40px;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-column-gap: 50px;
+  align-items: center;
+}
+
+h2, p {
+  margin: 0;
+}
+
+i {
+  color: darkorange;
+}
+
+@media only screen and (max-width: 550px) {
+  i {
+    display: none !important;
+  }
+
+  .feature {
+    text-align: center;
+    display: block;
+  }
+}
+
+#work {
+  box-sizing: border-box;
+  margin: 25px 0;
+  width: 100%;
+  max-height: 315px;
+  max-width: 560px;
+}
+
+video {
+  width: 100%;
+  min-height: 300px;
+}
+
+#pricing {
+  margin: 25px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product {
+  margin: 25px;
+  height: 300px;
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-align: center;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-row-gap: 10px;
+}
+
+.product-name {
+  padding: 10px;
+  background-color: #ddd;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px;
+}
+
+.btn {
+  align-self: center;
+  justify-self: center;
+  background-color: #f1c40f;
+  border: none;
+  padding: 10px 20px;
+}
+
+footer {
+  background-color: #ddd;
+  padding: 20px 10px 10px 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#copyright {
+  padding: 10px 10px;
+  font-size: 0.9em;
+}
