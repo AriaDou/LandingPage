@@ -1,21 +1,30 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #eee;
   font-family: sans-serif;
 }
 
 header {
   position: fixed;
-  box-sizing: border-box;
-  min-height: 80px;
-  padding: 10px;
+  top: 0;
+  padding: 15px 10px;
   width: 100%;
   z-index: 2;
   background-color: #eee;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    flex-direction: column;
+  }
 }
 
 #header-img {
@@ -26,38 +35,48 @@ header {
 }
 
 nav {
+  min-width: 40vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 600px) {
+  #nav-bar {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+}
+
 a {
-  padding: 0 10px;
   color: black;
   text-decoration: none;
 }
 
-#main, footer {
-  box-sizing: border-box;
-  width: 90%;
-  margin: 0 5%;
-  position: relative;
-  top: 90px;
+#main,
+footer {
+  margin: auto 5%;
 }
 
-#main {
+#form {
+  margin: 80px 0;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#form {
-  margin: 25px 0;
-  text-align: center;
-  display: grid;
-  grid-template-rows: auto 30px 30px;
-  grid-row-gap: 15px;
-  justify-items: center;
+@media screen and (max-width: 600px) {
+  #form {
+    margin-top: 130px;
+  }
+}
+
+#email {
+  margin: 1.5em auto;
+  height: 2.5em;
+  width: 30%;
 }
 
 #submit {
@@ -68,7 +87,7 @@ a {
 }
 
 #features {
-  margin: 25px 0;
+  margin: 25px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 40px;
@@ -94,6 +113,10 @@ i {
     display: none !important;
   }
 
+  #features {
+    margin-left: 25px;
+  }
+
   .feature {
     text-align: center;
     display: block;
@@ -102,7 +125,7 @@ i {
 
 #work {
   box-sizing: border-box;
-  margin: 25px 0;
+  margin: 25px auto;
   width: 100%;
   max-height: 315px;
   max-width: 560px;
@@ -117,40 +140,43 @@ video {
   margin: 25px 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product {
-  margin: 25px;
-  height: 300px;
-  width: 100%;
-  max-width: 280px;
+  margin: 10px;
+  width: calc(100% / 3);
   border: 1px solid black;
   border-radius: 3px;
   text-align: center;
-  display: grid;
-  grid-auto-rows: min-content;
-  grid-row-gap: 10px;
 }
 
 .product-name {
-  padding: 10px;
+  padding: 10px 0;
   background-color: #ddd;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+
+  .product {
+    margin: 10px auto;
+    max-width: 300px;
+    width: 100%;
+  }
 }
 
 .price {
   font-weight: bold;
   font-size: 1.5em;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  margin: 10px auto;
 }
 
 li {
+  list-style-type: none;
   margin: 10px;
 }
 
@@ -160,6 +186,7 @@ li {
   background-color: #f1c40f;
   border: none;
   padding: 10px 20px;
+  margin: 20px auto;
 }
 
 footer {
